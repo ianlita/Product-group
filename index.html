@@ -4,87 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Delicious Foods</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .header {
-            background-color: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 50px 0;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    /* Flexbox for centering */
+    .header, .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header {
+        background-color: #ff6f61;
+        color: white;
+        padding: 50px 0;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .section {
+        padding: 20px;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section h1 {
+        color: #ff6f61;
+        font-size: 2em;
+    }
+
+    .section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto 40px;
+    }
+
+    .product, .customer {
+        display: inline-block;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px;
+        vertical-align: top;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .product img, .customer img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .product h3, .customer h3 {
+        margin: 15px 0;
+        color: #ff6f61;
+    }
+
+    .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
         .header h1 {
-            margin: 0;
-            font-size: 3em;
+            font-size: 2em;
         }
-        .section {
-            padding: 20px;
-            text-align: center;
-        }
+
         .section h1 {
-            color: #ff6f61;
+            font-size: 1.5em;
         }
+
         .section p {
-            font-size: 1.2em;
-            line-height: 1.6;
+            font-size: 1em;
         }
-        .product {
-            display: inline-block;
-            width: 80%;
-            margin: 10px;
-            vertical-align: top;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+
+        .product, .customer {
+            width: calc(50% - 20px);
         }
-        .product img {
-            width: 100%;
-            border-radius: 8px;
+    }
+
+    @media (max-width: 480px) {
+        .header {
+            padding: 30px 0;
         }
-        .product h3 {
-            margin: 15px 0;
-            color: #ff6f61;
+
+        .header h1 {
+            font-size: 1.8em;
         }
-        .customer {
-            display: inline-block;
-            width: 80%;
-            margin: 10px;
-            vertical-align: top;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+
+        .product, .customer {
+            width: calc(100% - 20px);
         }
-        .customer img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .customer h3 {
-            margin: 15px 0;
-            color: #ff6f61;
-        }
-        .footer {
-            background-color: #343a40;
-            color: white;
-            text-align: left;
-            padding: 20px 0;
-            position: absolute;
-            width: 100%;
-            align-bottom: 0;
-            
-        }
-    </style>
+    }
+
+    /* Ensure footer sticks to the bottom */
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        margin-top: auto;
+    }
+
+    /* Prevent gaps when zooming out */
+    .section, .header, .footer {
+        max-width: 100%;
+    }
+</style>
+
 </head>
 <body>
+    
+       
+ 
     <div class="header">
         <h1>Group 5 Products</h1>
         <p>Taste Our Delicious Products Made By Our Group</p>
+    </div>
+    
+    <div class="section">
+        
+        <h2>Introduction</h2>
+        <p>Our products are crafted with care, using the finest ingredients to deliver a culinary experience that is both delightful and unforgettable. Each bite is a journey into rich flavors and authentic tastes, making them a must-try for any food lover.</p>
     </div>
 
     <div class="section">
@@ -106,47 +170,46 @@
         </div>
         
         <div class="section">
+        <h2>Why Our Products Are a Must-Try</h2>
+        <div>
+            <span class="icon">&#127828;</span> <!-- Icon representing tasty food -->
+            <span class="icon">&#127851;</span> <!-- Icon representing dessert -->
+            <span class="icon">&#127829;</span> <!-- Icon representing pastry -->
+        </div>
+        <p>Our products are crafted with care, using the finest ingredients to deliver a culinary experience that is both delightful and unforgettable. Each bite is a journey into rich flavors and authentic tastes, making them a must-try for any food lover.</p>
+        
+        <div class="section">
         <h2>Our Satisfied Customers</h2>
         
         <div class="customer">
-            <img src="Customers/C1.jpeg" alt="Product 1">
-            <h3>Thank you Miguel!</h3>
+            <img src="C1.jpeg" alt="Customer">
+            <h3>Thank you James!</h3>
+            
+        </div>
+               
+        <div class="customer">
+            <img src="C3.jpeg" alt="Customer">
+            <h3>Thank you Jacob!</h3>
             
         </div>
         <div class="customer">
-            <img src="Customers/C2.jpeg" alt="Product 1">
-            <h3>Thank you Natasha!</h3>
-            
-        </div>
-        <div class="customer">
-            <img src="Customers/C3.jpeg" alt="Product 1">
-            <h3>Thank you Carlos!</h3>
-            
-        </div>
-        <div class="customer">
-            <img src="Customers/C4.jpeg" alt="Product 1">
+            <img src="C4.jpeg" alt="Customer">
             <h3>Thank you Enteng!</h3>
             
         </div>
         <div class="customer">
-            <img src="Customers/C5.jpeg" alt="Product 1">
-            <h3>Thank you Jummie!</h3>
+            <img src="C5.jpeg" alt="Customer">
+            <h3>Thank you Andrea!</h3>
+        </div>
+            
+        <div class="customer">
+            <img src="C7.jpeg" alt="Customer">
+            <h3>Thank you Zhea!</h3>
             
         </div>
         <div class="customer">
-            <img src="Customers/C6.jpeg" alt="Product 1">
-            <h3>Thank you Cory!</h3>
-            
-        </div>
-        <div class="customer">
-            <img src="Customers/C7.jpeg" alt="Product 1">
-            <h3>Thank you Grace!</h3>
-            
-        </div>
-        <div class="customer">
-            <img src="Customers/C8.jpeg" alt="Product 1">
-            <h3>Thank you Chen!</h3>
-            
+            <img src="C8.jpeg" alt="Customer">
+            <h3>Thank you Zoey!</h3>
         </div>
         
     </div>
